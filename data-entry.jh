@@ -1,6 +1,6 @@
 entity ServiceOrders {
 	site String,
-    Supervisor String,
+    supervisor String,
     soNumber String required,
     partNumber String,
     partDescription String,
@@ -32,7 +32,7 @@ entity Locations {
 }
 
 entity TruckInventory {
-	date Localdate,
+	date String,
     truckNumber String required,
     site String,
     partNumber String,
@@ -61,7 +61,7 @@ entity ItemsRemovedFromPool {
 
 entity PurchaseOrders {
 	site String,
-    Supervisor String,
+    supervisor String,
     poNumber String required,
     partNumber String,
     partDescription String,
@@ -73,7 +73,7 @@ entity PurchaseOrders {
 }
 
 entity PoolInventory  {
-	date Localdate,
+	date String,
     partnumber String,
 	partdescription String,
     qtyin Integer,
