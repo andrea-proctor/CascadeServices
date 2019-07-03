@@ -1,0 +1,27 @@
+{
+    "name": "InventoryValues",
+    "fields": [
+        {
+            "fieldName": "partNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "partDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "valueEach",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190703123931",
+    "entityTableName": "inventory_values",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

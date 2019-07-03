@@ -1,0 +1,82 @@
+<div>
+    <h2 id="page-heading">
+        <span>Pool Inventories</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-pool-inventory" [routerLink]="['/pool-inventory/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down" >
+            Create new Pool Inventory
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="Query">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="alert alert-warning" *ngIf="poolInventories?.length === 0">
+        <span>No poolInventories found</span>
+    </div>
+    <div class="table-responsive" *ngIf="poolInventories?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Date</span></th>
+            <th><span>Partnumber</span></th>
+            <th><span>Partdescription</span></th>
+            <th><span>Qtyin</span></th>
+            <th><span>Qtyout</span></th>
+            <th><span>Language</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let poolInventory of poolInventories ;trackBy: trackId">
+                <td><a [routerLink]="['/pool-inventory', poolInventory.id, 'view' ]">{{poolInventory.id}}</a></td>
+                <td>{{poolInventory.date}}</td>
+                <td>{{poolInventory.partnumber}}</td>
+                <td>{{poolInventory.partdescription}}</td>
+                <td>{{poolInventory.qtyin}}</td>
+                <td>{{poolInventory.qtyout}}</td>
+                <td>{{poolInventory.language}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/pool-inventory', poolInventory.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/pool-inventory', poolInventory.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'pool-inventory', { outlets: { popup: poolInventory.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

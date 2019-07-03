@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="serviceOrders">
+            <h2><span>Service Orders</span> {{serviceOrders.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Site</span></dt>
+                <dd>
+                    <span>{{serviceOrders.site}}</span>
+                </dd>
+                <dt><span>Supervisor</span></dt>
+                <dd>
+                    <span>{{serviceOrders.supervisor}}</span>
+                </dd>
+                <dt><span>So Number</span></dt>
+                <dd>
+                    <span>{{serviceOrders.soNumber}}</span>
+                </dd>
+                <dt><span>Part Number</span></dt>
+                <dd>
+                    <span>{{serviceOrders.partNumber}}</span>
+                </dd>
+                <dt><span>Part Description</span></dt>
+                <dd>
+                    <span>{{serviceOrders.partDescription}}</span>
+                </dd>
+                <dt><span>Repair Cost</span></dt>
+                <dd>
+                    <span>{{serviceOrders.repairCost}}</span>
+                </dd>
+                <dt><span>Freight Charge</span></dt>
+                <dd>
+                    <span>{{serviceOrders.freightCharge}}</span>
+                </dd>
+                <dt><span>Total Charge</span></dt>
+                <dd>
+                    <span>{{serviceOrders.totalCharge}}</span>
+                </dd>
+                <dt><span>Notes</span></dt>
+                <dd>
+                    <span>{{serviceOrders.notes}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/service-orders', serviceOrders.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
