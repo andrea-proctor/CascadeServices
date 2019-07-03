@@ -1,0 +1,95 @@
+entity ServiceOrders {
+	site String,
+    Supervisor String,
+    soNumber String required,
+    partNumber String,
+    partDescription String,
+    repairCost String,
+    freightCharge String,
+    totalCharge String,
+    notes String
+}
+
+entity InventoryValues {
+	partNumber String,
+    partDescription String,
+    valueEach String
+}
+
+
+entity Supervisors {
+	firstName String,
+	lastName String,
+    site String
+}
+
+entity Locations {
+	site String,
+    street String,
+	zipCode String,
+	city String,
+	state String
+}
+
+entity TruckInventory {
+	date Localdate,
+    truckNumber String required,
+    site String,
+    partNumber String,
+    partDescription String,
+    category String
+    qtyOnHand Integer,
+    qtyOut Integer
+}
+
+
+entity PoolInventory {
+	title String,
+	description String
+}
+
+
+entity ItemsRemovedFromPool {
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate Instant,
+	salary Long,
+	commissionPct Long
+}
+
+entity PurchaseOrders {
+	site String,
+    Supervisor String,
+    poNumber String required,
+    partNumber String,
+    partDescription String,
+    qtyReplaced Integer,
+    replacementCostEach String,
+    freightCharge String,
+    totalCharge String,
+    notes String
+}
+
+entity PoolInventory  {
+	date Localdate,
+    partnumber String,
+	partdescription String,
+    qtyin Integer,
+    qtyout Integer,
+	language Language
+}
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+
+
+
+// defining multiple OneToMany relationships with comments
+
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
