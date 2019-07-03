@@ -1,0 +1,58 @@
+{
+    "name": "PurchaseOrders",
+    "fields": [
+        {
+            "fieldName": "site",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "supervisor",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "poNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "partNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "partDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "qtyReplaced",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "replacementCostEach",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "freightCharge",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "totalCharge",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "notes",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190703115925",
+    "entityTableName": "purchase_orders",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,50 @@
+{
+    "name": "TruckInventory",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "truckNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "site",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "partNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "partDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "category",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "qtyOnHand",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "qtyOut",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190703115922",
+    "entityTableName": "truck_inventory",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

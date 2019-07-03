@@ -43,6 +43,14 @@ public class CacheConfiguration {
             createCache(cm, io.github.jhipster.cascade.domain.User.class.getName());
             createCache(cm, io.github.jhipster.cascade.domain.Authority.class.getName());
             createCache(cm, io.github.jhipster.cascade.domain.User.class.getName() + ".authorities");
+            createCache(cm, io.github.jhipster.cascade.domain.ServiceOrders.class.getName());
+            createCache(cm, io.github.jhipster.cascade.domain.InventoryValues.class.getName());
+            createCache(cm, io.github.jhipster.cascade.domain.Supervisors.class.getName());
+            createCache(cm, io.github.jhipster.cascade.domain.Locations.class.getName());
+            createCache(cm, io.github.jhipster.cascade.domain.TruckInventory.class.getName());
+            createCache(cm, io.github.jhipster.cascade.domain.PoolInventory.class.getName());
+            createCache(cm, io.github.jhipster.cascade.domain.ItemsRemovedFromPool.class.getName());
+            createCache(cm, io.github.jhipster.cascade.domain.PurchaseOrders.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="itemsRemovedFromPool">
+            <h2><span>Items Removed From Pool</span> {{itemsRemovedFromPool.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>First Name</span></dt>
+                <dd>
+                    <span>{{itemsRemovedFromPool.firstName}}</span>
+                </dd>
+                <dt><span>Last Name</span></dt>
+                <dd>
+                    <span>{{itemsRemovedFromPool.lastName}}</span>
+                </dd>
+                <dt><span>Email</span></dt>
+                <dd>
+                    <span>{{itemsRemovedFromPool.email}}</span>
+                </dd>
+                <dt><span>Phone Number</span></dt>
+                <dd>
+                    <span>{{itemsRemovedFromPool.phoneNumber}}</span>
+                </dd>
+                <dt><span>Hire Date</span></dt>
+                <dd>
+                    <span>{{itemsRemovedFromPool.hireDate}}</span>
+                </dd>
+                <dt><span>Salary</span></dt>
+                <dd>
+                    <span>{{itemsRemovedFromPool.salary}}</span>
+                </dd>
+                <dt><span>Commission Pct</span></dt>
+                <dd>
+                    <span>{{itemsRemovedFromPool.commissionPct}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/items-removed-from-pool', itemsRemovedFromPool.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

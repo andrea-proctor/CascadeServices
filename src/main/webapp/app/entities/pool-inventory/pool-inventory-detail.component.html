@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="poolInventory">
+            <h2><span>Pool Inventory</span> {{poolInventory.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Date</span></dt>
+                <dd>
+                    <span>{{poolInventory.date}}</span>
+                </dd>
+                <dt><span>Partnumber</span></dt>
+                <dd>
+                    <span>{{poolInventory.partnumber}}</span>
+                </dd>
+                <dt><span>Partdescription</span></dt>
+                <dd>
+                    <span>{{poolInventory.partdescription}}</span>
+                </dd>
+                <dt><span>Qtyin</span></dt>
+                <dd>
+                    <span>{{poolInventory.qtyin}}</span>
+                </dd>
+                <dt><span>Qtyout</span></dt>
+                <dd>
+                    <span>{{poolInventory.qtyout}}</span>
+                </dd>
+                <dt><span>Language</span></dt>
+                <dd>
+                    <span>{{poolInventory.language}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/pool-inventory', poolInventory.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
