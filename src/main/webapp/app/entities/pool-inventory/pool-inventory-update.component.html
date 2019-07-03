@@ -1,0 +1,57 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-pool-inventory-heading">Create or edit a Pool Inventory</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_date">Date</label>
+                    <input type="text" class="form-control" name="date" id="field_date"
+                           formControlName="date"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_partnumber">Partnumber</label>
+                    <input type="text" class="form-control" name="partnumber" id="field_partnumber"
+                           formControlName="partnumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_partdescription">Partdescription</label>
+                    <input type="text" class="form-control" name="partdescription" id="field_partdescription"
+                           formControlName="partdescription"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_qtyin">Qtyin</label>
+                    <input type="number" class="form-control" name="qtyin" id="field_qtyin"
+                           formControlName="qtyin"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_qtyout">Qtyout</label>
+                    <input type="number" class="form-control" name="qtyout" id="field_qtyout"
+                           formControlName="qtyout"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_language">Language</label>
+                    <select class="form-control" name="language" formControlName="language" id="field_language">
+                        <option value="FRENCH">FRENCH</option>
+                        <option value="ENGLISH">ENGLISH</option>
+                        <option value="SPANISH">SPANISH</option>
+                    </select>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

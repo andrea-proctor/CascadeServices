@@ -1,0 +1,40 @@
+{
+    "name": "PoolInventory",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "partnumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "partdescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "qtyin",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "qtyout",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "language",
+            "fieldType": "Language",
+            "fieldValues": "FRENCH,ENGLISH,SPANISH"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190703123935",
+    "entityTableName": "pool_inventory",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

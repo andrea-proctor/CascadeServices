@@ -1,0 +1,54 @@
+{
+    "name": "ServiceOrders",
+    "fields": [
+        {
+            "fieldName": "site",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "supervisor",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "soNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "partNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "partDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "repairCost",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "freightCharge",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "totalCharge",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "notes",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190703123930",
+    "entityTableName": "service_orders",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

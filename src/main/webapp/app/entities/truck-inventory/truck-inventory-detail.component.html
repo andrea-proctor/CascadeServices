@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="truckInventory">
+            <h2><span>Truck Inventory</span> {{truckInventory.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Date</span></dt>
+                <dd>
+                    <span>{{truckInventory.date}}</span>
+                </dd>
+                <dt><span>Truck Number</span></dt>
+                <dd>
+                    <span>{{truckInventory.truckNumber}}</span>
+                </dd>
+                <dt><span>Site</span></dt>
+                <dd>
+                    <span>{{truckInventory.site}}</span>
+                </dd>
+                <dt><span>Part Number</span></dt>
+                <dd>
+                    <span>{{truckInventory.partNumber}}</span>
+                </dd>
+                <dt><span>Part Description</span></dt>
+                <dd>
+                    <span>{{truckInventory.partDescription}}</span>
+                </dd>
+                <dt><span>Category</span></dt>
+                <dd>
+                    <span>{{truckInventory.category}}</span>
+                </dd>
+                <dt><span>Qty On Hand</span></dt>
+                <dd>
+                    <span>{{truckInventory.qtyOnHand}}</span>
+                </dd>
+                <dt><span>Qty Out</span></dt>
+                <dd>
+                    <span>{{truckInventory.qtyOut}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/truck-inventory', truckInventory.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
